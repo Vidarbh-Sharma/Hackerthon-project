@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+
+   <!---- <ul>
+		<li><a class="active" href="Main.html">Main</a></li>
+<li><a class="active" href="index.html">Home</a></li>
+<li><a class="active" href="Contact.html">Menu</a></li>
+<li><a class="active" href="payment.html">payment</a></li>
+<li><a class="active" href="feedback.html">feedback</a></li>
+<li><a class="active" href="Other.html">Other</a></li>
+ </ul>
+  </div>!-->
+
+
+
+ <!--<div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display:none" id="mySidebar">
+	<button class="w3-bar-item w3-button w3-large"
+	onclick="w3_close()">Close &times;</button><br>
+	<a href="Main.html" class="w3-bar-item w3-button">Main</a><br>
+	<a href="index.html" class="w3-bar-item w3-button">Home</a><br>
+	<a href="Contact.html" class="w3-bar-item w3-button">Menu</a><br>
+	<a href="payment.html" class="w3-bar-item w3-button">payment</a><br>
+	<a href="feedback.html" class="w3-bar-item w3-button">feedback</a><br>
+	<a href="Other.html" class="w3-bar-item w3-button">Other</a><br>
+  </div>
+  
+  <div>
+	<button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+
+	<div id="container">!-->
+
+		<ul>
+	  <li><a href="Main.html">Main</a></li>
+	  <li><a href="login.html">Registration</a></li>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="Contact.html">Menu</a></li>
+	  <li><a href="payment.html">payment</a></li>
+	  <li><a href="feedback.html">feedback</a></li>
+	  <li><a href="Other.html">Other</a></li>
+	  
+	  </ul>
+	  </div> 
+
+
+<body>
+	<div id="ContactUs">
+		<h1>Food-Helpline</h1>
+		<form action="#">
+			<div class="form-shape">
+				<label for="query">
+					<b>Type of Query</b>
+				</label>
+				<select name="myQuery" id="query">
+					<option value="sel" selected>
+						Select
+					</option>
+					<option value="ord">
+						Order related Issues
+					</option>
+					<option value="Site">
+						Site related Issues
+					</option>
+					<option value="fed">
+						Complaint related Issues
+					</option>
+					<option value="others">
+						Others
+					</option>
+				</select>
+			</div>
+			<div class="form-shape">
+				<label for="name"><b>Name</b></label>
+				<input type="text" name="myName" id="name"
+					placeholder="Enter your Name">
+
+
+
+					<h2>Members Select</h2>
+
+					<!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+					<div class="custom-select" style="width:200px;">
+					  <select>
+						<option value="0">1:</option>
+						<option value="1">2</option>
+						<option value="2">3</option>
+						<option value="3">4</option>
+						<option value="4">5</option>
+						<option value="5">6</option>
+						<option value="6">7</option>
+						<option value="7">8</option>
+						<option value="8">9</option>
+						<option value="9">10</option>
+						<option value="10">11</option>
+						<option value="11">12</option>
+						
+					  </select>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+			
+				<h3>Enter Your Aadhar Number :</h3>
+				<input type="text" id="txtAadhar"/></br>
+				<input type="button" id="butAadhar" placeholder="Validate Aadhar"  onclick = "validation()" value = "Validate Aadhar"/> 
+			   
+
+			<div class="form-shape">
+				<label for="email">Email-Id</label>
+				<input type="email" name="myEmail" id="email"
+					placeholder="Enter your email">
+			</div>
+			<div class="form-shape">
+				<label for="pho">Phone Number</label>
+				<input type="phone" name="myPhone" id="pho"
+					placeholder="Enter your Phone no">
+			</div>
+			<div id="radio">
+				Are you a member of OnlneFoodShop:
+				Yes <input type="radio" name="eligible">
+				No <input type="radio" name="eligible">
+			</div>
+			<div class="form-shape">
+				<label for="message">
+					Ellaborate your query
+				</label>
+				<textarea name="mesg" id="message" cols="30" rows="10">
+				</textarea>
+			</div>
+			<input type="submit" value="Submit">
+			<input type="reset" value="Reset">
+		</form>
+	</div>
+
+
+	
+	<div class="cater3-movingBG">
+		<div class="flyinTxtCont">
+		<div class="flyIn lineOne">Fiestas</div>
+		<div class="flyIn lineTwo">Without </div>
+		<div class="flyIn lineThree">the fuss</div>
+		  <div class="flyIn lineFour">Catering. Delivered. Set up. Delicious.</div>
+		</div>
+		</div>
+
+
+	<script>
+		function validation() {
+	   var regexp=/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
+				   var x=document.getElementById("txtAadhar").value; 
+	  if(regexp.test(x)) {
+	   window.alert("Your Valid Aadhar no."); 
+	  }
+	   else 
+	  { 
+	  window.alert("Invalid Aadhar no."); 
+	  } 
+	  }
+
+	  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+	  </script> 
+
+
+	
+
+
+</body>
+
+</html>

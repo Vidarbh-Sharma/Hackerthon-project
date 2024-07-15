@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+body{
+  background-color: rgb(104, 111, 110);
+}
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+h1{
+  text-align: center;
+}
+body{
+margin:0px;
+padding:0px;
+}
+#container{
+  position:relative;
+padding:20px 10px;
+
+  
+}
+
+ul{
+  margin:0px;
+  padding:0px;
+  border:0px;
+  list-style-type: none;
+  height:30px
+
+
+}
+ul li{
+  
+ float:left;
+ display:list-item;   
+   
+
+}
+ul li a{
+  
+  text-decoration:none;
+  color:#fff;
+  font-family:Arial;
+  transition:all 0.4s ease-in-out;
+  background-color:#000;
+  padding:12px;
+  text-transform: uppercase;
+  
+}
+ul li a:hover{
+  
+  text-decoration:none;
+  color:#fff;
+  font-family:arial;
+  background-color:#98bf21;
+  padding:12px 12px 30px 12px;
+   
+  
+}
+ul li a.active{
+ padding:12px 12px 30px 12px; 
+ background-color:#98bf21;
+  
+}
+
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback</title>
+</head>
+<body>
+    
+  <!----  <ul>
+      <li><a class="active" href="Main.html">Main</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a class="active" href="Contact.html">Menu</a></li>
+        <li><a class="active" href="payment.html">payment</a></li>
+        <li><a class="active" href="feedback.html">feedback</a></li>
+        <li><a class="active" href="Other.html">Other</a></li>
+         </ul>
+          </div>!-->
+        
+
+
+         <!---- <div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display:none" id="mySidebar">
+            <button class="w3-bar-item w3-button w3-large"
+            onclick="w3_close()">Close &times;</button><br>
+            <a href="Main.html" class="w3-bar-item w3-button">Main</a><br>
+            <a href="index.html" class="w3-bar-item w3-button">Home</a><br>
+            <a href="Contact.html" class="w3-bar-item w3-button">Menu</a><br>
+            <a href="payment.html" class="w3-bar-item w3-button">payment</a><br>
+            <a href="feedback.html" class="w3-bar-item w3-button">feedback</a><br>
+            <a href="Other.html" class="w3-bar-item w3-button">Other</a><br>
+            </div>
+            
+            <div>
+            <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>!-->
+            
+            
+            <div id="container">
+
+              <ul>
+            <li><a href="Main.html">Main</a></li>
+            <li><a href="login.html">Registration</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Contact.html">Menu</a></li>
+            <li><a href="payment.html">payment</a></li>
+            <li><a href="feedback.html">feedback</a></li>
+            <li><a href="Other.html">Other</a></li>
+            
+            </ul>
+            </div> 
+                
+                
+              </ul>
+            </div> 
+        <h1>Feedback</h1>
+        <div class="mb-4 small">
+        Please provide your feedback in the form below
+        </div>
+        <form name="feedback_form" id="feedback_form" method="post">
+        <label>How do you rate your overall experience?</label>
+        <div class="mb-3 d-flex flex-row py-1">
+          <div class="form-check mr-3">
+          <input class="form-check-input" type="radio" name="rating" id="rating_bad" value="bad">
+          <label class="form-check-label" for="rating_bad">
+            bad
+          </label>
+          </div>
+          
+          <div class="form-check mx-3">
+          <input class="form-check-input" type="radio" name="rating" id="rating_good" value="good">
+          <label class="form-check-label" for="rating_good">
+            Good
+          </label>
+          </div>
+          
+          <div class="form-check mx-3">
+          <input class="form-check-input"  type="radio" name="rating" id="rating_excellent" value="excellent">
+          <label class="form-check-label" for="rating_excellent">
+            Excellent!
+          </label>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="form-label"  for="feedback_comments">Comments:</label>
+          <textarea class="form-control" required rows="6" name="comments" id="feedback_comments" ></textarea>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label" for="feedback_name">Your Name:</label>
+            <input type="text" required name="name" class="form-control" id="feedback_name"/>
+          </div>
+          
+          <div class="col mb-4">
+            <label class="form-label" for="feedback_email">Email:</label>
+            <input type="email" name="email" required class="form-control" id="feedback_email"/>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-lg" >Post</button>
+        </form>
+
+        
+
+
+        <script>
+
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+const numBalls = 50;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  document.body.append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
+        </script>
+</body>
+</html>
